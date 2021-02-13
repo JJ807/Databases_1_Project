@@ -10,7 +10,7 @@ The **Filmoholik** project includes implementations of:
 * aggregate functions
 
 ## ERD diagram 
-![diagram] (diagram_ERD.png)
+![diagram](diagram_ERD.png)
 
 ## Application usage example
 ![screenshot](screen.png)
