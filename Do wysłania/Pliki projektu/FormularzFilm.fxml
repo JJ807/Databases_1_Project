@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.271" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Filmoholik.FormularzFilm">
+   <children>
+      <BorderPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #333333;" stylesheets="@tabpane.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <bottom>
+            <HBox alignment="CENTER" prefHeight="136.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="98.0" prefWidth="800.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label alignment="CENTER" styleClass="textfieldy" text="* Wszystkie pola są obowiązkowe" />
+                        <Button fx:id="btnDodajFilmZatwierdz" alignment="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#dodajFilm" prefHeight="40.0" prefWidth="120.0" style="-fx-background-radius: 5; -fx-font-weight: bold; -fx-font-size: 16;" styleClass="btnAccept" text="Zatwierdź" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </Button>
+                        <Button fx:id="btnFilmAnuluj" alignment="CENTER" cancelButton="true" mnemonicParsing="false" onAction="#przejdzDoStartScreen" prefHeight="40.0" prefWidth="120.0" style="-fx-font-weight: bold; -fx-background-radius: 5; -fx-font-size: 16;" styleClass="btnReject" text="Anuluj" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets right="5.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+         </bottom>
+         <top>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" styleClass="dodaj" text="Dodaj nową produkcję flmową" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Separator prefWidth="200.0" style="-fx-background-color: #F9A602;" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <GridPane alignment="CENTER" hgap="5.0" prefHeight="302.0" prefWidth="726.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints maxWidth="392.79998779296875" minWidth="10.0" prefWidth="202.40003662109376" />
+                <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="NEVER" maxWidth="571.1999633789063" minWidth="151.99997558593748" prefWidth="255.19996337890632" />
+                  <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="NEVER" maxWidth="400.8000244140625" minWidth="38.400036621093705" prefWidth="125.59994506835938" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" styleClass="textfieldy" text="Tytuł:" textAlignment="CENTER" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" styleClass="textfieldy" text="Data wydania(YYYY-MM-dd):" textAlignment="CENTER" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" styleClass="textfieldy" text="Czas trwania(w minutach):" textAlignment="CENTER" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" styleClass="textfieldy" text="Opis:" textAlignment="CENTER" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" styleClass="textfieldy" text="Rok produkcji (4 cyfry):" textAlignment="CENTER" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="TFTytul" prefHeight="26.0" prefWidth="280.0" style="-fx-background-radius: 20;" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="TFRok" prefWidth="280.0" style="-fx-background-radius: 20;" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="TFData" prefWidth="280.0" style="-fx-background-radius: 20;" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="TFCzas" prefWidth="280.0" style="-fx-background-radius: 20;" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="TFOpis" prefWidth="280.0" style="-fx-background-radius: 20;" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </TextField>
+                  <Label fx:id="obowiazkowe1" alignment="CENTER" focusTraversable="false" text="To pole jest obowiązkowe" textAlignment="CENTER" textFill="RED" visible="false" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="System Bold" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="obowiazkowe3" alignment="CENTER" focusTraversable="false" text="To pole jest obowiązkowe" textAlignment="CENTER" textFill="RED" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="obowiazkowe4" alignment="CENTER" focusTraversable="false" text="To pole jest obowiązkowe" textAlignment="CENTER" textFill="RED" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="obowiazkowe5" alignment="CENTER" focusTraversable="false" text="To pole jest obowiązkowe" textAlignment="CENTER" textFill="RED" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="obowiazkowe6" alignment="CENTER" focusTraversable="false" text="To pole jest obowiązkowe" textAlignment="CENTER" textFill="RED" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" styleClass="textfieldy" text="Gatunek:" textAlignment="CENTER" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" styleClass="textfieldy" text="Kraj:" textAlignment="CENTER" GridPane.halignment="RIGHT" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" styleClass="textfieldy" text="Wytwornia:" textAlignment="CENTER" GridPane.halignment="RIGHT" GridPane.rowIndex="7">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" styleClass="textfieldy" text="Jezyk:" textAlignment="CENTER" GridPane.halignment="RIGHT" GridPane.rowIndex="8">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="TFGatunek" prefWidth="280.0" style="-fx-background-radius: 20;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextField fx:id="TFKraj" prefWidth="280.0" style="-fx-background-radius: 20;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <TextField fx:id="TFWytwornia" prefWidth="280.0" style="-fx-background-radius: 20;" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <TextField fx:id="TFJezyk" prefWidth="280.0" style="-fx-background-radius: 20;" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                  <Label fx:id="obowiazkowe7" alignment="CENTER" focusTraversable="false" text="To pole jest obowiązkowe" textAlignment="CENTER" textFill="RED" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="System Bold" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="obowiazkowe8" alignment="CENTER" focusTraversable="false" text="To pole jest obowiązkowe" textAlignment="CENTER" textFill="RED" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="System Bold" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="obowiazkowe9" alignment="CENTER" focusTraversable="false" text="To pole jest obowiązkowe" textAlignment="CENTER" textFill="RED" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                     <font>
+                        <Font name="System Bold" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="obowiazkowe10" alignment="CENTER" focusTraversable="false" text="To pole jest obowiązkowe" textAlignment="CENTER" textFill="RED" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                     <font>
+                        <Font name="System Bold" size="11.0" />
+                     </font>
+                  </Label>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </GridPane>
+         </center>
+         <left>
+            <Region minWidth="1.0" prefHeight="264.0" prefWidth="1.0" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Region minWidth="59.0" prefHeight="264.0" prefWidth="72.0" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>
